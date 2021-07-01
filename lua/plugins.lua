@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
 		-- status line
     use 'glepnir/galaxyline.nvim'
 		-- Themes
-	use { "~/software/coloraqs" }
+	use { "romariorobby/nvcode-color-schemes.vim" }
 		-- Syntax Highlighting
 	use 'sheerun/vim-polyglot'
 		-- Treesitter

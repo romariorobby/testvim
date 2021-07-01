@@ -1,3 +1,3 @@
 
-vim.cmd("colorscheme romario")
-vim.cmd("let g:coloraqs=256")
+vim.cmd("colorscheme gruvaqs")
+vim.cmd("let g:gruvaqs_termcolors=256")
