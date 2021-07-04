@@ -73,7 +73,8 @@ return require('packer').startup(function(use)
 	use { "romariorobby/nvcode-color-schemes.vim" }
 
 	-- Syntax Highlighting {{
-	-- use 'sheerun/vim-polyglot'
+	-- FIXME: When remove this spaces become 8, idk why?
+	use 'sheerun/vim-polyglot'
 		-- Treesitter
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	-- }}
@@ -134,10 +135,10 @@ return require('packer').startup(function(use)
 	-- {{ GIT
 	use {
 		'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim',
-		event = "BufRead",
 		config = function()
 			require("qs-gitsigns").config()
-		end
+		end,
+		event = "BufRead"
 	}
 
 	use {
