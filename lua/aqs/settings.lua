@@ -1,8 +1,11 @@
 local opt = vim.opt
+local cmd = vim.cmd
 
-vim.cmd("syntax on")
--- vim.cmd('filetype plugin on') -- filetype detection
+cmd("syntax on")
+cmd('filetype plugin on') -- filetype detection
 opt.number = true
+opt.inccommand = "split"
+opt.iskeyword = opt.iskeyword + { "-" } -- treat dash as seperate word
 opt.relativenumber = true
 opt.smartindent = true
 opt.clipboard = "unnamedplus"
@@ -27,3 +30,4 @@ opt.backup = false
 opt.signcolumn = "yes"
 opt.timeoutlen = 300
 opt.completeopt = {'menuone','noselect'} -- or ,noinsert
+opt.guifont = "monospace:h17"           -- the font used in graphical neovim applications
