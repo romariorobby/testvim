@@ -310,13 +310,14 @@ return require('packer').startup(function(use)
         event = "BufRead",
         run = 'npm install --prefix server',
     }
+	use {'romariorobby/taskell.nvim', run = ':TaskellInstall'}
 
-	use {
-		"oberblastmeister/neuron.nvim",
-		config = function()
-			require('qs-neuron').config()
-		end
-	}
+	-- use {
+	-- 	"oberblastmeister/neuron.nvim",
+	-- 	config = function()
+	-- 		require('qs-neuron').config()
+	-- 	end
+	-- }
 	-- use {'jakewvincent/texmagic.nvim'}
 	-- use 'junegunn/goyo.vim'
     -- use 'junegunn/limelight.vim'

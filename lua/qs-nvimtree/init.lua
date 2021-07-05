@@ -16,6 +16,7 @@ M.config = function()
     vim.g.nvim_tree_follow = 1
     vim.g.nvim_tree_indent_markers = 1
     vim.g.nvim_tree_hide_dotfiles = 1 --0 by default, this option hides files and folders starting with a dot `.`
+	vim.g.nvim_tree_update_cwd = 1 -- 0 by default, will update the tree cwd when changing nvim's directory (DirChanged event). Behaves strangely with autochdir set.
     vim.g.nvim_tree_auto_close = 0 --0 by default, closes the tree when it's the last window
 
     vim.g.nvim_tree_icons = {

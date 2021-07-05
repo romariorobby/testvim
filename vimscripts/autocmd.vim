@@ -52,3 +52,23 @@ inoremap <Up>     <C-o>:echom "--> k <-- "<CR>
 inoremap <Down>   <C-o>:echom "--> j <-- "<CR>
 inoremap <Right>  <C-o>:echom "--> l <-- "<CR>
 inoremap <Left>   <C-o>:echom "--> h <-- "<CR>
+
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        exec ':silent BufferClose ' . old_name
+        redraw!
+    endif
+endfunction
+
+function! CopyFile()
+    let old_name = expand('%')
+    let new_name = input('New Copy Name: ')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        redraw!
+    endif
+endfunction

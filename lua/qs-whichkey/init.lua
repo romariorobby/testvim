@@ -48,6 +48,9 @@ local mappings = {
         name = "Action",
 	    S = {':%s/\\s\\+$//<cr>' , 'remove whitespace'},
 	    g = {':Glow<cr>', 'Glow Markdown Preview'},
+		-- C = {':cd %:p:h<CR>:pwd<cr>' , 'cd to current'},
+		-- c = {':lcd %:p:h<CR>:pwd<cr>', 'lcd to current'},
+		r = {':%s/<c-r><c-w>//g<left><left>', 'Replace' }
     },
     b = {
         name = 'Buffer',

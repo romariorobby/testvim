@@ -22,15 +22,17 @@ vim.api.nvim_set_keymap('n', '<leader>v', '<C-w>v', opt)
 -- vim.api.nvim_set_keymap('i','<C-CR>','<C-O>O', {noremap=true})
 
 -- Terminal Navigation {{
-vim.api.nvim_set_keymap('t', '<leader>h', [[<C-\><C-N><C-w>h]], opt)
-vim.api.nvim_set_keymap('t', '<leader>j', [[<C-\><C-N><C-w>j]], opt)
-vim.api.nvim_set_keymap('t', '<leader>k', [[<C-\><C-N><C-w>k]], opt)
-vim.api.nvim_set_keymap('t', '<leader>l', [[<C-\><C-N><C-w>l]], opt)
-vim.api.nvim_set_keymap('t', '<leader>s', [[<C-\><C-N><C-w>s]], opt)
-vim.api.nvim_set_keymap('t', '<leader>v', [[<C-\><C-N><C-w>v]], opt)
-vim.api.nvim_set_keymap('t', '<C-[>', [[<C-\><C-N>]], opt)
-vim.api.nvim_set_keymap('t', '<Esc>', [[<C-\><C-N>]], opt)
+-- vim.api.nvim_set_keymap('t', '<leader>h', [[<C-\><C-N><C-w>h]], opt)
+-- vim.api.nvim_set_keymap('t', '<leader>j', [[<C-\><C-N><C-w>j]], opt)
+-- vim.api.nvim_set_keymap('t', '<leader>k', [[<C-\><C-N><C-w>k]], opt)
+-- vim.api.nvim_set_keymap('t', '<leader>l', [[<C-\><C-N><C-w>l]], opt)
+
+-- vim.api.nvim_set_keymap('t', '<leader>s', [[<C-\><C-N><C-w>s]], opt)
+-- vim.api.nvim_set_keymap('t', '<leader>v', [[<C-\><C-N><C-w>v]], opt)
+-- vim.api.nvim_set_keymap('t', '<C-[>', [[<C-\><C-N>]], opt)
+-- vim.api.nvim_set_keymap('t', '<Esc>', [[<C-\><C-N>]], opt)
 -- }}
+--
 -- Hate escape
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', opt)
 vim.api.nvim_set_keymap('i', 'kj', '<ESC>', opt) vim.api.nvim_set_keymap('i', 'kk', '<ESC>', opt)

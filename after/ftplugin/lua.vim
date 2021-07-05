@@ -1,1 +1,2 @@
-setlocal sw=4
+setl tw=120
+setlocal sw=2
