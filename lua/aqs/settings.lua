@@ -1,8 +1,8 @@
 local opt = vim.opt
 local cmd = vim.cmd
 
-cmd("syntax on")
 cmd('filetype plugin on') -- filetype detection
+cmd('syntax on')
 opt.number = true
 opt.inccommand = "split"
 opt.iskeyword = opt.iskeyword + { "-" } -- treat dash as seperate word

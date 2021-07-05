@@ -1,0 +1,7 @@
+{
+  "metatitle":{
+	"prefix": "mt",
+	"body": ["title: ${0}"],
+	"description": "Add Metadata Title"
+  }
+}

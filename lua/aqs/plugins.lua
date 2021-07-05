@@ -74,7 +74,7 @@ return require('packer').startup(function(use)
 
 	-- Syntax Highlighting {{
 	-- FIXME: When remove this spaces become 8, idk why?
-	use 'sheerun/vim-polyglot'
+	-- use 'sheerun/vim-polyglot'
 		-- Treesitter
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	-- }}
@@ -310,6 +310,13 @@ return require('packer').startup(function(use)
         event = "BufRead",
         run = 'npm install --prefix server',
     }
+
+	use {
+		"oberblastmeister/neuron.nvim",
+		config = function()
+			require('qs-neuron').config()
+		end
+	}
 	-- use {'jakewvincent/texmagic.nvim'}
 	-- use 'junegunn/goyo.vim'
     -- use 'junegunn/limelight.vim'
