@@ -75,8 +75,8 @@ vim.api.nvim_set_keymap('n', '<A-BS>', '<C-W>=', opt)
 vim.api.nvim_set_keymap('v', '<', '<gv', opt)
 vim.api.nvim_set_keymap('v', '>', '>gv', opt)
 
-vim.cmd('vnoremap p "0p')
-vim.cmd('vnoremap P "0P')
+-- vim.cmd('vnoremap p "0p')
+-- vim.cmd('vnoremap P "0P')
 
 -- Move selected line / block of text in visual
 vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv', opt)

@@ -18,5 +18,6 @@ require ('lsp.json-ls')
 require ('lsp.vim-ls')
 require ('lsp.yaml-ls')
 require ('lsp.css-ls')
+require ('lsp.js-ls')
 
 vim.cmd('source ~/.config/nvim/vimscripts/autocmd.vim')
