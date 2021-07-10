@@ -20,10 +20,13 @@ require('telescope').setup{
             prompt_position = "bottom",
             preview_cutoff = 120
         },
+		path_display = {
+		  "absolute"
+		  -- "shorten",
+		},
         file_sorter = require'telescope.sorters'.get_fuzzy_file,
         file_ignore_patterns = {},
         generic_sorter = require'telescope.sorters'.get_generic_fuzzy_sorter,
-        shorten_path = true,
         winblend = 0,
         border = {},
         borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
@@ -98,7 +101,7 @@ local M = {}
 function M.find_neovim()
   require('telescope.builtin').find_files {
     prompt_title = "~ dotfiles ~",
-    shorten_path = false,
+	path_display = { "absolute" },
     cwd = "~/.config/nvim",
 
     layout_strategy = 'horizontal',
@@ -112,7 +115,7 @@ end
 function M.find_notes()
   require('telescope.builtin').find_files {
     prompt_title = "~ Notes ~",
-    shorten_path = false,
+	path_display = { "absolute" },
     cwd = "~/Dropbox/media/documents/notes/",
 
     layout_strategy = 'horizontal',
@@ -125,7 +128,7 @@ end
 function M.find_todos()
   require('telescope.builtin').find_files {
     prompt_title = "~ Agenda/TODOS ~",
-    shorten_path = false,
+	path_display = { "absolute" },
     cwd = "~/Dropbox/media/documents/notes/gtd/",
 
     layout_strategy = 'horizontal',
@@ -138,7 +141,7 @@ end
 function M.find_dot()
   require('telescope.builtin').find_files {
     prompt_title = "~ Dotfiles ~",
-    shorten_path = false,
+	path_display = { "absolute" },
     file_ignore_patterns = {
 			"spicetify", "JetBrains", "Google", "*.log", "*.db",
 			"BraveSoftware", "obsidian", "VSCodium", "emacs", "Notion", "Rambox", "Bitwarden",
@@ -159,7 +162,7 @@ end
 function M.find_chezdot()
   require('telescope.builtin').find_files {
     prompt_title = "~ Chezmoi Dotfiles ~",
-    shorten_path = true,
+	path_display = { "shorten" },
     file_ignore_patterns = {},
     cwd = "~/.local/share/chezmoi/",
 
@@ -172,7 +175,7 @@ end
 function M.find_scripts()
   require('telescope.builtin').find_files {
     prompt_title = "~ Scripts ~",
-    shorten_path = false,
+	path_display = { "absolute" },
     cwd = "~/.local/bin/",
 
     layout_strategy = 'horizontal',
@@ -185,7 +188,7 @@ end
 function M.find_suck()
   require('telescope.builtin').find_files {
     prompt_title = "~ Suckless ~",
-    shorten_path = false,
+	path_display = { "absolute" },
     file_ignore_patterns = {},
     cwd = "~/.local/src/",
 
