@@ -52,20 +52,28 @@ function! s:openWhichKeyInVisualMode()
 endfunction
 
 " Better Navigation
-nnoremap <silent> <C-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
-xnoremap <silent> <C-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
-nnoremap <silent> <C-k> :call VSCodeNotify('workbench.action.navigateUp')<CR>
-xnoremap <silent> <C-k> :call VSCodeNotify('workbench.action.navigateUp')<CR>
-nnoremap <silent> <C-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
-xnoremap <silent> <C-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
-nnoremap <silent> <C-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
-xnoremap <silent> <C-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
+nnoremap <silent> <Space>j :call VSCodeNotify('workbench.action.navigateDown')<CR>
+xnoremap <silent> <Space>j :call VSCodeNotify('workbench.action.navigateDown')<CR>
+nnoremap <silent> <Space>k :call VSCodeNotify('workbench.action.navigateUp')<CR>
+xnoremap <silent> <Space>k :call VSCodeNotify('workbench.action.navigateUp')<CR>
+nnoremap <silent> <Space>h :call VSCodeNotify('workbench.action.navigateLeft')<CR>
+xnoremap <silent> <Space>h :call VSCodeNotify('workbench.action.navigateLeft')<CR>
+nnoremap <silent> <Space>l :call VSCodeNotify('workbench.action.navigateRight')<CR>
+xnoremap <silent> <Space>l :call VSCodeNotify('workbench.action.navigateRight')<CR>
 
+nnoremap <silent> <space>v :call VSCodeNotify('workbench.action.splitEditor')<CR>
+xnoremap <silent> <space>v :call VSCodeNotify('workbench.action.splitEditor')<CR>
+nnoremap <silent> <space>s :call VSCodeNotify('workbench.action.splitEditorDown')<CR>
+xnoremap <silent> <space>s :call VSCodeNotify('workbench.action.splitEditorDown')<CR>
 nnoremap gr <Cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
+nnoremap <silent> <space>tn :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 
+" TODO: Remove C-/
 " Bind C-/ to vscode commentary since calling from vscode produces double comments due to multiple cursors
 xnoremap <expr> <C-/> <SID>vscodeCommentary()
 nnoremap <expr> <C-/> <SID>vscodeCommentary() . '_'
+xnoremap <expr> <Space>// <SID>vscodeCommentary()
+nnoremap <expr> <Space>// <SID>vscodeCommentary() . '_'
 
 nnoremap <silent> <C-w>_ :<C-u>call VSCodeNotify('workbench.action.toggleEditorWidths')<CR>
 

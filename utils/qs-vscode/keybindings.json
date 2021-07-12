@@ -1,0 +1,31 @@
+[
+  {
+	"key": "space l",
+	"when": "sideBarFocus",
+	"command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "space k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "focusedView == 'workbench.panel.output'"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  }
+]

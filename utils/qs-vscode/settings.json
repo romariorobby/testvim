@@ -1,0 +1,351 @@
+{
+    "workbench.colorTheme": "Gruvboxaqs",
+    "window.menuBarVisibility": "toggle",
+    "editor.minimap.enabled": false,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/utils/qs-vscode/init.vim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/utils/qs-vscode/init.vim",
+	"workbench.list.automaticKeyboardNavigation": false,
+    "whichkey.sortOrder": "alphabetically",
+    "whichkey.delay": 0,
+    "whichkey.bindings": [
+        {
+            "key": ";",
+            "name": "commands",
+            "icon": "rocket",
+            "type": "command",
+            "command": "workbench.action.showCommands"
+        },
+        {
+            "key": "a",
+            "name": "Action",
+            "icon": "zap",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "f",
+                    "name": "Find and Replace",
+                    "type": "command",
+                    "command": "editor.action.startFindReplaceAction"
+                },
+                {
+                    "key": "p",
+                    "name": "Project",
+                    "type": "command",
+                    "command": "workbench.action.replaceInFiles"
+                },
+                {
+                    "key": "l",
+                    "name": "Start Live Server",
+                    "type": "command",
+                    "command": "extension.liveServer.goOnline"
+                },
+                {
+                    "key": "L",
+                    "name": "Stop Live Server",
+                    "type": "command",
+                    "command": "extension.liveServer.goOffline"
+                }
+            ]
+        },
+        {
+            "key": "c",
+            "name": "Code/Lsp",
+            "icon": "gear",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": ";",
+                    "name": "Refactor",
+                    "type": "command",
+                    "command": "editor.action.refactor",
+                    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+                },
+                {
+                    "key": "a",
+                    "name": "Auto Fix",
+                    "type": "command",
+                    "command": "editor.action.autoFix",
+                    "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+                },
+                {
+                    "key": "d",
+                    "name": "Definition",
+                    "type": "command",
+                    "command": "editor.action.revealDefinition",
+                    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+                },
+                {
+                    "key": "D",
+                    "name": "Declaration",
+                    "type": "command",
+                    "command": "editor.action.revealDeclaration"
+                },
+                {
+                    "key": "e",
+                    "name": "Errors",
+                    "type": "command",
+                    "command": "workbench.actions.view.problems"
+                },
+                {
+                    "key": "f",
+                    "name": "Format",
+                    "type": "command",
+                    "command": "editor.action.formatDocument",
+                    "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+                },
+                {
+                    "key": "i",
+                    "name": "Implementation",
+                    "type": "command",
+                    "command": "editor.action.goToImplementation",
+                    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+                },
+                {
+                    "key": "j",
+                    "name": "Next Error",
+                    "icon": "arrow-down",
+                    "type": "commmand",
+                    "command": "editor.action.marker.nextInFiles"
+                },
+                {
+                    "key": "k",
+                    "name": "Previous Error",
+                    "icon": "arrow-up",
+                    "type": "commmand",
+                    "command": "editor.action.marker.prevInFiles"
+                },
+                {
+                    "key": "l",
+                    "name": "Code Lens",
+                    "type": "command",
+                    "command": "codelens.showLensesInCurrentLine"
+                },
+                {
+                    "key": "n",
+                    "name": "Next Problem",
+                    "type": "command",
+                    "command": "editor.action.marker.next",
+                    "when": "editorFocus"
+                },
+                {
+                    "key": "N",
+                    "name": "Next Problem (Proj)",
+                    "type": "command",
+                    "command": "editor.action.marker.nextInFiles",
+                    "when": "editorFocus"
+                },
+                {
+                    "key": "o",
+                    "name": "Outline",
+                    "type": "command",
+                    "command": "outline.focus"
+                },
+                {
+                    "key": "p",
+                    "name": "Prev Problem",
+                    "type": "command",
+                    "command": "editor.action.marker.prevInFiles",
+                    "when": "editorFocus"
+                },
+                {
+                    "key": "P",
+                    "name": "Prev Problem (Proj)",
+                    "type": "command",
+                    "command": "editor.action.marker.prev",
+                    "when": "editorFocus"
+                },
+                {
+                    "key": "q",
+                    "name": "Quick Fix",
+                    "type": "command",
+                    "command": "editor.action.quickFix",
+                    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+                },
+                {
+                    "key": "R",
+                    "name": "References",
+                    "type": "command",
+                    "command": "editor.action.goToReferences",
+                    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+                },
+                {
+                    "key": "r",
+                    "name": "Rename",
+                    "type": "command",
+                    "command": "editor.action.rename",
+                    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+                },
+                {
+                    "key": "v",
+                    "name": "View All References",
+                    "type": "command",
+                    "command": "references-view.find",
+                    "when": "editorHasReferenceProvider"
+                },
+                {
+                    "key": "s",
+                    "name": "Go To Symbol",
+                    "type": "command",
+                    "command": "workbench.action.gotoSymbol"
+                },
+                {
+                    "key": "S",
+                    "name": "Show All Symbols",
+                    "type": "command",
+                    "command": "workbench.action.showAllSymbols"
+                },
+                {
+                    "key": "x",
+                    "name": "Code-runner",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "c",
+                            "name": "Run",
+                            "type": "command",
+                            "command": "code-runner.run"
+                        },
+                        {
+                            "key": "l",
+                            "name": "By Language",
+                            "type": "command",
+                            "command": "code-runner.runByLanguage"
+                        },
+                        {
+                            "key": "C",
+                            "name": "Custom",
+                            "type": "command",
+                            "command": "code-runner.runCustomCommand"
+                        },
+                        {
+                            "key": "s",
+                            "name": "Stop",
+                            "type": "command",
+                            "command": "code-runner.stop"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "g",
+            "name": "+Git",
+            "icon": "git-branch",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "a",
+                    "name": "Stage",
+                    "type": "command",
+                    "command": "git.stage"
+                }
+            ]
+        },
+        {
+            "key": "t",
+            "name": "+Toggle",
+            "icon": "settings",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "t",
+                    "name": "Toggle Terminal",
+                    "type": "command",
+                    "command": "workbench.action.togglePanel"
+                },
+                {
+                    "key": "m",
+                    "name": "Minimap",
+                    "type": "command",
+                    "command": "editor.action.toggleMinimap"
+                },
+                {
+                    "key": "n",
+                    "name": "File Explorer / Sidebar",
+                    "icon": "list-tree",
+                    "type": "command",
+                    "command": "workbench.files.action.focusFilesExplorer",
+                    "when": "sideBarVisible"
+                },
+                {
+                    "key": "T",
+                    "name": "Focus Terminal",
+                    "type": "command",
+                    "command": "workbench.action.terminal.toggleTerminal",
+                    "when": "!terminalFocus"
+                },
+                {
+                    "key": "u",
+                    "name": "UI toggles...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "a",
+                            "name": "Toggle tool/activity bar visibility",
+                            "type": "command",
+                            "command": "workbench.action.toggleActivityBarVisibility"
+                        },
+                        {
+                            "key": "b",
+                            "name": "Toggle side bar visibility",
+                            "type": "command",
+                            "command": "workbench.action.toggleSidebarVisibility"
+                        },
+                        {
+                            "key": "j",
+                            "name": "Toggle panel visibility",
+                            "type": "command",
+                            "command": "workbench.action.togglePanel"
+                        },
+                        {
+                            "key": "F",
+                            "name": "Toggle full screen",
+                            "type": "command",
+                            "command": "workbench.action.toggleFullScreen"
+                        },
+                        {
+                            "key": "s",
+                            "name": "Select theme",
+                            "type": "command",
+                            "command": "workbench.action.selectTheme"
+                        },
+                        {
+                            "key": "S",
+                            "name": "Statusbar/Modeline",
+                            "type": "command",
+                            "icon": "preview",
+                            "command": "workbench.action.toggleStatusbarVisibility"
+                        },
+                        {
+                            "key": "m",
+                            "name": "Toggle maximized panel",
+                            "type": "command",
+                            "command": "workbench.action.toggleMaximizedPanel"
+                        },
+                        {
+                            "key": "M",
+                            "name": "Menubar",
+                            "type": "command",
+                            "command": "workbench.action.toggleMenuBar"
+                        },
+                        {
+                            "key": "T",
+                            "name": "Toggle tab visibility",
+                            "type": "command",
+                            "command": "workbench.action.toggleTabsVisibility"
+                        },
+                        {
+                            "key": "z",
+                            "name": "Zen",
+                            "icon": "eye",
+                            "type": "command",
+                            "command": "workbench.action.toggleZenMode"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

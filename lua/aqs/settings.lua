@@ -3,6 +3,7 @@ local cmd = vim.cmd
 
 cmd('filetype plugin on') -- filetype detection
 cmd('syntax on')
+-- opt.wildignore = 
 opt.number = true
 opt.inccommand = "split"
 opt.iskeyword = opt.iskeyword + { "-" } -- treat dash as seperate word
@@ -12,6 +13,11 @@ opt.clipboard = "unnamedplus"
 opt.termguicolors = true
 opt.tabstop = 4
 opt.softtabstop = 4
+opt.shiftwidth = 4
+-- opt.showmatch = true -- show matching brackets when text indicator is over them
+opt.showbreak = string.rep(" ", 3) -- Make it so that long lines wrap smartly
+opt.expandtab = true
+opt.equalalways = false -- I don't like my windows changing all the time
 opt.undodir = "~/.config/nvim/undodir"
 opt.swapfile = false
 opt.title = true
@@ -19,9 +25,12 @@ opt.writebackup = false
 opt.showmode = false
 opt.mouse = "a"
 opt.wrap = false
+opt.autoindent = true
+opt.cindent = true
 opt.hidden = true
 opt.scrolloff = 10
 opt.colorcolumn = "80"
+opt.cursorline = true -- Highlight the current line
 opt.updatetime = 300
 -- opt.autochdir = true -- auto change directory when open file or buffer
 opt.splitbelow = true

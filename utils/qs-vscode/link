@@ -1,0 +1,7 @@
+#!/bin/sh
+nvimdir="$HOME/.config/nvim/utls/qs-vscode" 
+[ "$OSTYPE" == "linug-gnu" ] && cd $HOME/.config/VSCodium/user-data/User || exit 1
+[ "$(uname)" == "Darwin" ] && cd $HOME/Library/Application\ Support/VSCodium/user-data/User || exit 1
+
+ln -s $nvimdir/settings.json
+ln -s $nvimdir/keybindings.json

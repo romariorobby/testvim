@@ -310,15 +310,22 @@ return require('packer').startup(function(use)
         event = "BufRead",
         run = 'npm install --prefix server',
     }
-	use {'romariorobby/taskell.nvim', run = ':TaskellInstall'}
+	if vim.fn.executable "taskell" == 1 then
+	  use {'romariorobby/taskell.nvim', run = ':TaskellInstall'}
+	end
+	use {'dhruvasagar/vim-dotoo'}
 
-	-- use {
-	-- 	"oberblastmeister/neuron.nvim",
-	-- 	config = function()
-	-- 		require('qs-neuron').config()
-	-- 	end
-	-- }
+	if vim.fn.executable "neuron" == 1 then
+	  use {
+		  "oberblastmeister/neuron.nvim",
+		  config = function()
+			  require('qs-neuron').config()
+		  end
+	  }
+	end
 	-- use {'jakewvincent/texmagic.nvim'}
 	-- use 'junegunn/goyo.vim'
     -- use 'junegunn/limelight.vim'
 end)
+-- Due date string 
+-- https://github.com/NFrid/due.nvim
